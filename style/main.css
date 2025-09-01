@@ -17,25 +17,62 @@
  * ===========================
 **/
 
+@import url(//fonts.googleapis.com/css?family=Lato);
+
 /* General Style */
 body {
-
+	background: #f7f6f6;
+	font-family: 'Lato', 'Open Sans', sans-serif;
 }
 
 /* Simple Button styles*/
 button {
-
+	outline: none;
+	background: #00acc1;
+	color: #fff;
 }
 
 /* Simple Button Style on Hover */
 button:hover {
-
+	background: #00bcd4;
 }
 
 /* General Styling for Menu Screens */
 [data-screen] {
 
 }
+
+/* font glow-white */
+centered-dialog [data-content="wrapper"] {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff;
+  animation: fireflyGlow 2.5s infinite ease-in-out alternate;
+}
+
+@keyframes fireflyGlow {
+  0% {
+    text-shadow:
+      0 0 3px #fff,
+      0 0 6px #fff,
+      0 0 12px #fff;
+  }
+  50% {
+    text-shadow:
+      0 0 6px #fff,
+      0 0 12px #fff,
+      0 0 24px #fff;
+  }
+  100% {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 8px #fff;
+  }
+}
+
 
 /**
  * ===========================
@@ -45,7 +82,10 @@ button:hover {
 
 /* Main Menu Styling */
 [data-screen="main"] {
-
+	background: url('https://storage.monogatari.io/demo/assets/images/monogatari-promo.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 /* Main Menu Buttons Styling */
@@ -61,7 +101,8 @@ button:hover {
 
 /* Slots Style */
 [data-component="save-slot"] figure {
-
+	background: rgba(229, 57, 53, 0.8);
+	color: rgba(255, 255, 255, 0.8);
 }
 
 /* Slot's Image Style */
@@ -75,8 +116,11 @@ button:hover {
 }
 
 /* Slots Delete Button Style */
+[data-component="save-slot"] figure,
 [data-component="save-slot"] button {
-
+-webkit-transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),-webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16),0px 2px 5px 0px rgba(0, 0, 0, 0.23);
 }
 
 /**
@@ -130,7 +174,7 @@ button:hover {
 
 /* Quick Menu Style */
 [data-component="quick-menu"] {
-
+	color: #f7f6f6;
 }
 
 /* Quick Menu Buttons Style */
@@ -156,15 +200,15 @@ button:hover {
 
 /* Use the background property to set a color for these */
 input[type=range]:focus::-webkit-slider-runnable-track {
-
+	background: #ffd54f;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-
+	background: #ffd54f;
 }
 
 input[type=range]:focus::-ms-fill-upper {
-
+	background: #ffd54f;
 }
 
 input[type=range]:focus::-ms-fill-lower {
@@ -172,15 +216,15 @@ input[type=range]:focus::-ms-fill-lower {
 }
 
 input[type=range]::-moz-range-track {
-
+	background: #ffd54f;
 }
 
 input[type=range]::-ms-fill-lower {
-
+	background: #ffd54f;
 }
 
 input[type=range]::-ms-fill-upper {
-
+	background: #ffd54f;
 }
 
 /** Medium Screens, Phablets (601px) **/
@@ -237,3 +281,4 @@ input[type=range]::-ms-fill-upper {
 @media screen and (min-width: 500em) {
 
 }
+

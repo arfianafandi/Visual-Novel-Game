@@ -3,6 +3,11 @@
 // Persistent Storage Variable
 monogatari.storage ({
 	player: {
-		name: ''
-	}
+		name: "Player"
+	},
+	yui_name: "???",
+	animations: false,
+	media: false,
+	playing: false,
+	scripting: false
 });

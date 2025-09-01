@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Game Drag & Drop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Mini Game: Cocokkan Item ke Zona</h1>
+    <div class="hud">
+      <div>Skor: <span id="score">0</span>/<span id="total">0</span></div>
+      <div>Waktu: <span id="time">60</span>d</div>
+      <button id="resetBtn" class="btn">Ulangi</button>
+    </div>
+  </header>
+
+  <main class="board">
+    <section class="items" aria-label="Item yang bisa diseret">
+      <!-- Items injected by JS -->
+    </section>
+    <section class="zones" aria-label="Zona tujuan">
+      <!-- Zones injected by JS -->
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="app-footer">
+    <p>Tip: seret item ke zona yang benar. Selesaikan semua sebelum waktu habis!</p>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
